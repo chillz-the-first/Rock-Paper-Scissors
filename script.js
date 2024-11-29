@@ -2,16 +2,9 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
-    let choice = Math.floor(Math.random() * 3) + 1;
-    if (choice === 1) {
-        return "rock";
-    }
-    else if (choice === 2) {
-        return "paper";
-    }
-    else if (choice === 3) {
-        return "scissors";
-    }
+    let choices = ["rock", "paper", "scissors"];
+    let num = Math.floor(Math.random() * 3);
+    return choices[num];
 }
 
 function getHumanChoice() {
@@ -40,7 +33,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-// playRound(getHumanChoice(), getComputerChoice());
+playRound(getHumanChoice(), getComputerChoice());
 /*function playGame() {
     for (let i = 0; i < 5; i++) {
         playRound(getHumanChoice(), getComputerChoice());
